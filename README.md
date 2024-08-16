@@ -1,9 +1,12 @@
-# MedicAlert
-This is an event-driven application which aggregates simulated medical data into a time-series within a SQL database.
+# MoodMe
+Welcome to MoodMe! This is a social media application where mood and building meaningful connections matters. 
 
 ## Overview
-At a high level, the application contains several components 
+The application follows a microservices-based architecture with high availability. The components that make up MoodMe are:
 
-* kafka-producer: the .NET core-based stream simulator which generates structured randomly-generated (read: fake) medical data and sends it to a Kafka stream
-* kafka-consumer: the application which consumes the resulting stream data, performs various aggregations and ETL operations and sends the data to the SQL database
-* web-api: the end web server application which serves the ingested data
+* End-user application (Nginx/React)
+* Application REST API (ASP.NET Core Web API)
+* Real-time Communication Websocket API (.NET SignalR Web API)
+* Batch data pipeline/processing system (Prefect/Python)
+* SQL Server database
+
